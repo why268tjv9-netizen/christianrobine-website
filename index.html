@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Music by Christian Robiné</title>
+<meta name="description" content="Welcome to my little world of music. Here, I will publish all information about my journey and updates to new songs.">
+<link rel="canonical" href="https://christianrobine.de/">
+<meta name="theme-color" content="#0d0d0e">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Music by Christian Robiné">
+<meta property="og:title" content="Music by Christian Robiné">
+<meta property="og:description" content="Self-taught pianist and composer. Listen to Eternal Dream, Horizon, La Dernière Danse and Sunshine.">
+<meta property="og:url" content="https://christianrobine.de/">
+<meta property="og:image" content="https://christianrobine.de/images/music.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Christian Robiné", "url": "https://christianrobine.de/", "genre": "Piano, Neo-classical", "sameAs": ["https://open.spotify.com/artist/64CoQXDu5TFAwbB9OGTL6L", "https://music.apple.com/de/artist/christian-robin%C3%A9/1802019698", "https://music.youtube.com/channel/UCTcl1u5pNvG1RGCQnbo3Y9g", "https://www.instagram.com/chris.rbb/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap">
+<style>
+/* Layout: white intro, then full-bleed black-and-white photo scenes with centred text, then quiet white link pages */
+:root{
+  --paper:#ffffff;
+  --ink:#3d3d3f;
+  --ink-soft:#8c8c90;
+  --night:#0d0d0e;
+  --on-night:#d6d6d8;
+  --on-night-strong:#ffffff;
+  --line:rgba(61,61,63,.18);
+  --font:'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+
+/* language: both texts live in the page, one is shown */
+html[data-lang="de"] [lang="en"]:not(html), html[data-lang="en"] [lang="de"]:not(html){display:none!important}
+
+/* ---------- language switch (top right) ---------- */
+.lang-switch{position:fixed;z-index:50;top:calc(env(safe-area-inset-top,0px) + 14px);right:14px;display:flex;padding:3px;border-radius:999px;background:rgba(255,255,255,.72);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 2px 14px rgba(0,0,0,.12);font:600 12px/1 var(--font);letter-spacing:.08em}
+.lang-switch button{appearance:none;border:0;background:transparent;color:var(--ink);padding:8px 11px;border-radius:999px;cursor:pointer;font:inherit;letter-spacing:inherit}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* ---------- intro ---------- */
+.intro{padding:clamp(72px,14vw,140px) 16px clamp(56px,10vw,110px);text-align:center;background:var(--paper)}
+.intro h1{margin:0;font-weight:600;font-size:clamp(2.1rem,6vw,3.4rem);letter-spacing:-.015em;line-height:1.1;color:var(--ink)}
+.intro p{margin:18px 0 0;text-transform:uppercase;letter-spacing:.34em;font-size:clamp(.72rem,2vw,.9rem);color:var(--ink-soft);font-weight:400;padding-left:.34em}
+
+/* ---------- photo scenes ---------- */
+.scene{position:relative;overflow:hidden;isolation:isolate;background:var(--night);color:var(--on-night);text-align:center;padding:clamp(96px,16vw,180px) 16px}
+.scene .bg{position:absolute;inset:-90px 0;z-index:-2;background-color:var(--night);background-image:linear-gradient(0deg,rgba(0,0,0,.5) 0%,rgba(18,18,18,.12) 70%),var(--img);background-size:cover;background-position:var(--pos,center);will-change:transform;transform:translate3d(0,0,0) scale(1.08)}
+.scene[data-pin-top] .bg{inset:0 0 -140px 0;transform-origin:50% 0}
+.scene::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,0,0,.28),transparent 75%);pointer-events:none}
+.scene .inner{max-width:40rem;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+.scene h2{position:relative;margin:0 0 .4rem;font-weight:600;font-size:clamp(2.5rem,8vw,4rem);line-height:1.08;letter-spacing:-.02em;color:var(--on-night-strong);text-wrap:balance;text-shadow:0 0 28px rgba(255,255,255,.16)}
+.scene h2::before{content:"";position:absolute;left:50%;top:50%;width:170%;height:260%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(255,255,255,.16),rgba(255,255,255,0));z-index:-1;pointer-events:none;opacity:.55}
+.scene p{margin:0;font-size:clamp(1rem,2.6vw,1.12rem);line-height:2;font-weight:400;text-wrap:pretty}
+.scene strong{color:var(--on-night-strong);font-weight:600}
+.scene em{font-style:italic}
+
+.btn{display:inline-flex;align-items:center;gap:.9rem;margin-top:1rem;padding:1.05rem 2.4rem;border-radius:999px;background:#fff;color:#111;text-decoration:none;font-weight:600;font-size:1.05rem;box-shadow:0 0 0 0 rgba(255,255,255,.5);transition:transform .35s ease, box-shadow .6s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 36px 6px rgba(255,255,255,.28)}
+.btn svg{width:1.15em;height:1.15em}
+
+.listen{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:.8rem}
+.listen a{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.05rem;border-radius:999px;border:1px solid rgba(255,255,255,.34);color:var(--on-night-strong);text-decoration:none;font-size:.9rem;font-weight:500;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .3s ease,border-color .3s ease}
+.listen a:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.6)}
+.listen svg{width:.95em;height:.95em}
+
+/* ---------- white link pages ---------- */
+.plain{background:var(--paper);color:var(--ink);text-align:center;padding:clamp(80px,12vw,130px) 16px}
+.plain h3{margin:0 0 2.2rem;font-weight:600;font-size:clamp(2.1rem,6.5vw,3rem);letter-spacing:-.015em;line-height:1.1}
+.plain + .plain{padding-top:0}
+.tracks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.6rem;font-size:1.2rem}
+.tracks a{text-underline-offset:.22em;text-decoration-thickness:1px;transition:color .3s ease}
+.tracks a:hover{color:#000}
+.stack{display:flex;flex-direction:column;gap:clamp(4.5rem,10vw,6rem)}
+
+.socials{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(1rem,4vw,1.8rem)}
+.socials a{display:flex;flex-direction:column;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-size:.78rem;letter-spacing:.04em}
+.socials .ic{width:64px;height:64px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:transform .35s ease, box-shadow .5s ease}
+.socials a:hover .ic{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.2)}
+.socials svg{width:30px;height:30px}
+
+.contact .mail{font-size:clamp(1.05rem,3.4vw,1.3rem);letter-spacing:.14em;font-weight:300;color:var(--ink);text-decoration:none;word-break:break-all}
+.contact .mail:hover{text-decoration:underline;text-underline-offset:.3em}
+.globe{display:inline-flex;align-items:center;gap:.6rem;margin-top:3rem;padding:.9rem 1.5rem;border-radius:999px;background:#cfcfd1;color:#1b1b1c;text-decoration:none;font-weight:600;font-size:.95rem;border:0;cursor:pointer;font-family:inherit;letter-spacing:.06em}
+.globe svg{width:1.1em;height:1.1em}
+footer{padding:2rem 16px calc(2.5rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em}
+
+/* ---------- scroll reveal ("fade out of the blur") ---------- */
+.js .reveal{opacity:0;filter:blur(10px);transform:translate3d(0,26px,0);transition:opacity 1.2s ease,filter 1.2s ease,transform 1.2s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;filter:blur(0);transform:none}
+.js .scene h2.reveal.in{animation:halo 2.6s ease-out both;animation-delay:var(--d,0s)}
+.js .scene h2.reveal::before{opacity:0;transition:opacity 2s ease .3s}
+.js .scene h2.reveal.in::before{opacity:.55}
+@keyframes halo{
+  0%{text-shadow:0 0 0 rgba(255,255,255,0)}
+  35%{text-shadow:0 0 38px rgba(255,255,255,.7),0 0 90px rgba(255,255,255,.35)}
+  100%{text-shadow:0 0 28px rgba(255,255,255,.16)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;filter:none;transform:none;transition:none}
+  .js .scene h2.reveal.in{animation:none}
+  .scene .bg{transform:none!important;inset:0}
+}
+</style>
+
+</head>
+<body>
+<nav class="lang-switch" aria-label="Language">
+  <button type="button" id="btn-de" data-set-lang="de" aria-pressed="false">DE</button>
+  <button type="button" id="btn-en" data-set-lang="en" aria-pressed="false">EN</button>
+</nav>
+
+<header class="intro">
+  <h1 class="reveal">Christian Robiné</h1>
+  <p class="reveal" style="--d:.25s"><span lang="en">Welcome to my world of music</span><span lang="de">Willkommen in meiner Welt der Musik</span></p>
+</header>
+
+<main>
+<section class="scene" id="music" data-pin-top style="--img:url('images/music.jpg');--pos:22% 0%">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="inner">
+    <h2 class="reveal"><span lang="en">My Music</span><span lang="de">Meine Musik</span></h2>
+    <p class="reveal" style="--d:.15s" lang="en"><strong>Hey there</strong>, great to have you here.<br>I’m passionate about playing the piano and composing my own music.<br>If you’re curious to hear what I’ve been creating, just <strong>tap the button</strong>.</p>
+    <p class="reveal" style="--d:.15s" lang="de"><strong>Schön, dass Sie meine Seite besuchen.</strong><br>Ich spiele leidenschaftlich gerne Klavier und komponiere meine eigene Musik.<br>Wenn Sie neugierig auf meine Stücke sind, <strong>tippen Sie auf den Button</strong>.</p>
+    <a class="btn reveal" style="--d:.3s" href="https://open.spotify.com/artist/64CoQXDu5TFAwbB9OGTL6L" target="_blank" rel="noopener"><span lang="en">Learn more</span><span lang="de">Erfahre mehr</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+  </div>
+</section>
+
+<section class="scene" id="story" style="--img:url('images/story.jpg');--pos:center 60%">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="inner">
+    <h2 class="reveal"><span lang="en">My Story</span><span lang="de">Meine Story</span></h2>
+    <div lang="en" style="display:contents">
+      <p class="reveal">I am a self-taught composer who began playing the piano at the age of five. What started as a childhood curiosity soon grew into a lifelong passion. I never set out to become famous or pursue a professional music career, but my deep connection to music—and the joy it brings me—eventually inspired me to share my original compositions with the world.</p>
+      <p class="reveal">Early on, I received formal piano lessons, but after a few years, I chose to continue exploring music on my own terms. Teaching myself by ear and intuition, I found inspiration in the cinematic styles of composers like Ludovico Einaudi and Hans Zimmer. Their influence helped shape my own atmospheric musical language.</p>
+      <p class="reveal">For me, the piano is more than an instrument; it is a safe space. In times of stress or uncertainty, I find comfort in the simplicity of a melody—something that allows me to disconnect from the noise of everyday life. Over time, this emotional bond with music led me to start composing my own pieces. What began as a personal experiment evolved into a powerful form of self-expression. Through my music, I can give a voice to feelings and thoughts that words often fail to capture. Each piece reflects a mood, a memory, or a fleeting moment of inspiration.</p>
+      <p class="reveal">My music is not driven by ambition, but by authenticity. My goal is to create honest, heartfelt piano music and make it accessible to anyone who might find comfort or meaning in it—just as I have.</p>
+    </div>
+    <div lang="de" style="display:contents">
+      <p class="reveal">Ich bin ein autodidaktischer Komponist und habe im Alter von fünf Jahren mit dem Klavierspielen begonnen. Was damals nur Neugier war, wurde schnell zu einer Leidenschaft, die mich bis heute begleitet. Ich habe nicht den Wunsch, berühmt zu werden, aber die tiefe Verbundenheit, die ich zur Musik empfinde, und die Freude, die sie mir schenkt, haben mich schließlich dazu bewegt, meine eigenen Kompositionen mit anderen zu teilen.</p>
+      <p class="reveal">Anfangs bekam ich klassischen Klavierunterricht, doch nach einigen Jahren entschied ich mich, meinen eigenen Weg zu gehen. Ich brachte mir das Spielen zunehmend selber bei – nach Gehör, nach Gefühl, nach Intuition. Besonders geprägt haben mich die filmischen Stilrichtungen von Komponisten wie Ludovico Einaudi und Hans Zimmer, deren Einflüsse sich bis heute in meiner atmosphärischen Klangsprache wiederfinden.</p>
+      <p class="reveal">Für mich ist das Klavier mehr als nur ein Instrument – es ist ein Ort, an dem ich zur Ruhe komme. Manchmal reicht schon eine kleine Melodie, um kurz durchzuatmen und meinen Kopf wieder frei zu bekommen. Mit der Zeit entstand aus dieser emotionalen Nähe zur Musik der Wunsch, eigene Stücke zu schreiben. Was zunächst nur ein persönliches Experiment war, entwickelte sich zu einer wichtigen Form meines Ausdrucks. Durch meine Musik kann ich Gefühle und Gedanken ausdrücken, für die Worte oft nicht ausreichen. Jedes Stück steht für eine Stimmung, eine Erinnerung oder einen flüchtigen Moment der Inspiration.</p>
+      <p class="reveal">Mit meiner Musik will ich Menschen einander näherbringen. Mein Ziel ist es, ehrliche, berührende Klaviermusik zu schaffen und sie mit Menschen zu teilen, die darin vielleicht dieselbe Bedeutung sehen wie ich.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="sunshine" style="--img:url('images/sunshine.jpg')">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="inner">
+    <h2 class="reveal">Sunshine</h2>
+    <p class="reveal" lang="en"><strong>“<em>Sunshine</em>” holds a very special place in my heart.</strong><br>It was the first time I composed and released a song in an orchestral version, which made the whole process feel new and meaningful in a very personal way. For me, <em>Sunshine</em> represents a moment of growth: the moment I stepped beyond solo piano and allowed my music to expand into something bigger, more cinematic, and more expressive. But while composing <em>Sunshine</em>, I also learned to use the tools I work with much more effectively. I always try to develop my music further and improve my skills.</p>
+    <p class="reveal" lang="de"><strong>„<em>Sunshine</em>“ hat einen ganz besonderen Platz in meinem Herzen.</strong><br>Es war das erste Mal, dass ich einen Song in einer Orchesterfassung komponiert und veröffentlicht habe, was den gesamten Prozess für mich auf eine sehr persönliche Weise neu und bedeutungsvoll machte. Für mich steht <em>Sunshine</em> für einen Moment des Wachstums: den Moment, in dem ich über das Solo-Klavier hinausging und meiner Musik erlaubte, sich zu etwas Größerem und Ausdrucksstärkerem zu entwickeln. Während ich <em>Sunshine</em> komponierte, lernte ich aber auch, die Tools, mit denen ich arbeite, viel effektiver einzusetzen und dadurch meine Musik weiterzuentwickeln.</p>
+    <div class="listen reveal"><a href="https://open.spotify.com/track/3XLglHAps2bxN9Pjnyr0oW" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Spotify</a><a href="https://music.apple.com/de/album/sunshine/1827253461?i=1827253463" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Apple Music</a></div>
+  </div>
+</section>
+
+<section class="scene" id="la-derniere-danse" style="--img:url('images/danse.jpg')">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="inner">
+    <h2 class="reveal">La Dernière Danse</h2>
+    <div lang="en" style="display:contents">
+      <p class="reveal"><strong>For me “<em>La Dernière Danse</em>” is a piece that tells a story.</strong><br>It’s a romantic ballad about two people who love each other deeply, yet for reasons they cannot control, they aren’t able to stay together. Their final dance becomes the one moment where everything they’ve held inside finally comes to the surface — the love they shared, the pain of letting go, and the memories they wish could last a little longer.</p>
+      <p class="reveal">While composing the piece, I imagined this last dance taking place in a quiet, dimly lit room, where the world around them fades and only the two of them remain. There’s a sense of closeness, but also a quiet sadness, because both know that this moment is their goodbye.</p>
+      <p class="reveal">For me, <em>La Dernière Danse</em> captures that feeling of holding on and letting go at the same time — the beauty of a love that was real, and the heartbreak of a farewell that had to happen. It’s a piece about emotion, memory, and the final tenderness two people share before going their separate ways.</p>
+    </div>
+    <div lang="de" style="display:contents">
+      <p class="reveal"><strong>Für mich ist „<em>La Dernière Danse</em>“ ein Stück, das eine Geschichte erzählt.</strong><br>Es ist eine romantische Ballade über zwei Menschen, die sich sehr lieben, aber aus Gründen, auf die sie keinen Einfluss haben, nicht zusammenbleiben können. Ihr letzter Tanz wird zu dem Moment, in dem Emotionen, die sie in sich getragen haben, endlich an die Oberfläche kommen – die Liebe, die sie geteilt haben, der Schmerz des Loslassens und die Erinnerungen, von denen sie sich wünschen, dass sie noch ein wenig länger andauern könnten.</p>
+      <p class="reveal">Während ich das Stück komponierte, stellte ich mir diesen letzten Tanz vor, der die Welt um sie herum verblassen lässt und nur noch sie beide übrig sind. Es herrscht ein Gefühl der Nähe, aber auch eine stille Traurigkeit, denn beide wissen, dass dieser Moment ihr Abschied ist.</p>
+      <p class="reveal">Für mich fängt <em>La Dernière Danse</em> dieses Gefühl des Festhaltens und Loslassens zugleich ein – die Schönheit einer Liebe, die echt war, und den Herzschmerz eines Abschieds, der unvermeidlich ist. Es ist ein Stück über Emotionen, Erinnerungen und die letzte Zärtlichkeit, die zwei Menschen teilen, bevor sie getrennte Wege gehen.</p>
+    </div>
+    <div class="listen reveal"><a href="https://open.spotify.com/track/0t6BmVLIrUXrRSJu3Cv1Hz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Spotify</a><a href="https://music.apple.com/de/album/la-derni%C3%A8re-danse/1817059395?i=1817059396" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Apple Music</a></div>
+  </div>
+</section>
+
+<section class="scene" id="horizon" style="--img:url('images/horizon.jpg');--pos:70% center">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="inner">
+    <h2 class="reveal">Horizon</h2>
+    <div lang="en" style="display:contents">
+      <p class="reveal"><strong>After releasing my first piece, my emotions were on a high.</strong><br>That feeling immediately inspired me to keep composing.<br>With <em>Horizon</em>, I wanted to create a piece that reflects very deep emotions without feeling rushed or overwhelming. Something calm, yet full of intensity underneath the surface.</p>
+      <p class="reveal">Compared to my other pieces, I composed <em>Horizon</em> surprisingly quickly. But it wasn’t because I didn’t give myself time — it was because, once I had written the first sections, the rest of the piece felt almost obvious to me. I instantly knew where the music needed to go and how it should unfold.</p>
+      <p class="reveal">For me, <em>Horizon</em> represents a harmony that is too difficult to put into words.</p>
+    </div>
+    <div lang="de" style="display:contents">
+      <p class="reveal"><strong>Nachdem ich mein erstes Stück veröffentlicht hatte, befand ich mich emotional auf einem Hoch.</strong><br>Dieses Gefühl inspirierte mich sofort dazu, weiter zu komponieren.<br>Mit <em>Horizon</em> wollte ich ein Stück schaffen, das sehr tiefe Emotionen widerspiegelt, ohne gehetzt oder überwältigend zu wirken. Etwas Ruhiges, das dennoch unter der Oberfläche voller Intensität steckt.</p>
+      <p class="reveal">Im Vergleich zu meinen anderen Stücken habe ich <em>Horizon</em> überraschend schnell komponiert. Aber das lag nicht daran, dass ich mir keine Zeit genommen hatte – sondern daran, dass mir der Rest des Stücks, nachdem ich die ersten Abschnitte geschrieben hatte, fast selbstverständlich erschien. Ich wusste sofort, wohin die Musik führen und wie sie sich entfalten sollte.</p>
+      <p class="reveal">Für mich steht <em>Horizon</em> für eine Harmonie, die sich nur schwer in Worte fassen lässt.</p>
+    </div>
+    <div class="listen reveal"><a href="https://open.spotify.com/track/6vVdRuBiWlRfkqj69U4rXQ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Spotify</a><a href="https://music.apple.com/de/album/horizon/1809799148?i=1809799149" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Apple Music</a></div>
+  </div>
+</section>
+
+<section class="scene" id="eternal-dream" style="--img:url('images/dream.jpg')">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="inner">
+    <h2 class="reveal">Eternal Dream</h2>
+    <div lang="en" style="display:contents">
+      <p class="reveal"><strong>“<em>Eternal Dream</em>” was my very first composition.</strong><br>Without question the hardest one to create – not because it’s more difficult to play than my other pieces, but because everything about it was new to me. I had no experience, no routine to follow, no sense of what the process should feel like. That uncertainty made the piece challenging, but it’s also what makes <em>Eternal Dream</em> so special to me.</p>
+      <p class="reveal">Composing it wasn’t a straight path. It was a process. I kept writing small sections, little ideas and fragments, without really knowing where they would lead. Over time, those pieces began to connect, and eventually they grew into a complete composition.</p>
+      <p class="reveal">For me, <em>Eternal Dream</em> represents a beginning. It’s the moment I stepped into something unknown and discovered how much I love creating music. Every part of the piece reminds me of that journey, of learning as I went, and of watching something small slowly become something meaningful.</p>
+    </div>
+    <div lang="de" style="display:contents">
+      <p class="reveal"><strong>„<em>Eternal Dream</em>“ war meine allererste Komposition.</strong><br>Zweifellos die schwierigste, die ich je geschrieben habe – nicht, weil sie schwieriger zu spielen ist als meine anderen Stücke, sondern, weil alles daran neu für mich war. Ich hatte keine Erfahrung, keine Routine, an die ich mich halten konnte, keine Vorstellung davon, wie der Prozess ablaufen sollte. Diese Unsicherheit machte das Stück zu einer Herausforderung, aber das ist auch der Grund, warum <em>Eternal Dream</em> für mich so besonders ist.</p>
+      <p class="reveal">Das Komponieren war kein geradliniger Weg, sondern ein Prozess. Ich schrieb immer wieder kleine Abschnitte, kleine Ideen und Fragmente, ohne wirklich zu wissen, wohin sie führen würden. Mit der Zeit fügten sich diese Teile zusammen und wuchsen schließlich zu einer vollständigen Komposition heran.</p>
+      <p class="reveal">Für mich steht <em>Eternal Dream</em> für einen Neuanfang – der Moment, in dem ich mich auf etwas Unbekanntes eingelassen habe. Dadurch erkannte ich, wie sehr ich es liebe, mich durch Musik auszudrücken. Jeder Teil des Stücks erinnert mich an diese Reise – daran, wie ich gelernt habe und wie etwas Kleines langsam zu etwas Bedeutungsvollem wurde.</p>
+    </div>
+    <div class="listen reveal"><a href="https://open.spotify.com/track/74xYWVZLgqD9iadQwIyWOo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Spotify</a><a href="https://music.apple.com/de/album/eternal-dream/1802022997?i=1802022999" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Apple Music</a></div>
+  </div>
+</section>
+
+<div class="plain">
+  <div class="stack">
+    <section>
+      <h3 class="reveal"><span lang="en">My Spotify</span><span lang="de">Mein Spotify</span></h3>
+      <ul class="tracks">
+        <li class="reveal"><a href="https://open.spotify.com/track/74xYWVZLgqD9iadQwIyWOo" target="_blank" rel="noopener">Eternal Dream</a></li>
+        <li class="reveal" style="--d:.08s"><a href="https://open.spotify.com/track/6vVdRuBiWlRfkqj69U4rXQ" target="_blank" rel="noopener">Horizon</a></li>
+        <li class="reveal" style="--d:.16s"><a href="https://open.spotify.com/track/0t6BmVLIrUXrRSJu3Cv1Hz" target="_blank" rel="noopener">La Dernière Danse</a></li>
+        <li class="reveal" style="--d:.24s"><a href="https://open.spotify.com/track/3XLglHAps2bxN9Pjnyr0oW" target="_blank" rel="noopener">Sunshine</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="reveal"><span lang="en">My Apple Music</span><span lang="de">Mein Apple Music</span></h3>
+      <ul class="tracks">
+        <li class="reveal"><a href="https://music.apple.com/de/album/eternal-dream/1802022997?i=1802022999" target="_blank" rel="noopener">Eternal Dream</a></li>
+        <li class="reveal" style="--d:.08s"><a href="https://music.apple.com/de/album/horizon/1809799148?i=1809799149" target="_blank" rel="noopener">Horizon</a></li>
+        <li class="reveal" style="--d:.16s"><a href="https://music.apple.com/de/album/la-derni%C3%A8re-danse/1817059395?i=1817059396" target="_blank" rel="noopener">La Dernière Danse</a></li>
+        <li class="reveal" style="--d:.24s"><a href="https://music.apple.com/de/album/sunshine/1827253461?i=1827253463" target="_blank" rel="noopener">Sunshine</a></li>
+      </ul>
+    </section>
+    <section id="links">
+      <h3 class="reveal"><span lang="en">My Links</span><span lang="de">Meine Links</span></h3>
+      <ul class="socials">
+        <li class="reveal"><a href="https://www.instagram.com/chris.rbb/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.5" r="3.6"/></svg></span>Instagram</a></li>
+        <li class="reveal" style="--d:.08s"><a href="https://music.apple.com/de/artist/christian-robin%C3%A9/1802019698" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3.2v11.3a3.2 3.2 0 1 1-2-2.95V7.6L10 9.1v7.4A3.2 3.2 0 1 1 8 13.55V5.6z"/></svg></span>Apple Music</a></li>
+        <li class="reveal" style="--d:.16s"><a href="https://open.spotify.com/artist/64CoQXDu5TFAwbB9OGTL6L" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="10" width="2.6" height="4" rx="1.3"/><rect x="7.4" y="6.5" width="2.6" height="11" rx="1.3"/><rect x="11.8" y="3.5" width="2.6" height="17" rx="1.3"/><rect x="16.2" y="7.5" width="2.6" height="9" rx="1.3"/><rect x="20.2" y="10.5" width="1.6" height="3" rx=".8"/></svg></span>Spotify</a></li>
+        <li class="reveal" style="--d:.24s"><a href="https://music.youtube.com/channel/UCTcl1u5pNvG1RGCQnbo3Y9g" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M10 8.6v6.8l5.6-3.4z" fill="currentColor" stroke="none"/></svg></span>YouTube Music</a></li>
+      </ul>
+    </section>
+    <section class="contact">
+      <h3 class="reveal"><span lang="en">Contact</span><span lang="de">Kontakt</span></h3>
+      <a class="mail reveal" href="mailto:info@christianrobine.de">info@christianrobine.de</a>
+      <div><button type="button" class="globe reveal" id="globe-switch"><span lang="en">DE</span><span lang="de">EN</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></button></div>
+    </section>
+  </div>
+</div>
+</main>
+
+<footer>© <span id="year">2026</span> Christian Robiné</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var meta={
+    en:{title:'Music by Christian Robiné',desc:'Welcome to my little world of music. Here, I will publish all information about my journey and updates to new songs.'},
+    de:{title:'Musik von Christian Robiné',desc:'Willkommen in meiner kleinen Welt der Musik. Hier veröffentliche ich alles über meinen Weg und neue Stücke.'}
+  };
+  function store(k,v){try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){return null}}
+  function setLang(l,save){
+    root.setAttribute('data-lang',l); root.lang=l;
+    document.title=meta[l].title;
+    var d=document.querySelector('meta[name="description"]'); if(d) d.setAttribute('content',meta[l].desc);
+    document.getElementById('btn-de').setAttribute('aria-pressed',l==='de');
+    document.getElementById('btn-en').setAttribute('aria-pressed',l==='en');
+    if(save) store('lang',l);
+  }
+  var initial=store('lang');
+  if(initial!=='de'&&initial!=='en'){
+    if(/^de\./.test(location.hostname)) initial='de';
+    else initial=((navigator.language||'').toLowerCase().indexOf('de')===0)?'de':'en';
+  }
+  setLang(initial,false);
+  document.querySelectorAll('[data-set-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-set-lang'),true)})});
+  document.getElementById('globe-switch').addEventListener('click',function(){setLang(root.getAttribute('data-lang')==='de'?'en':'de',true); window.scrollTo({top:0,behavior:'smooth'})});
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveal on scroll: text sharpens out of a soft blur */
+  if('IntersectionObserver' in window && !reduce){
+    root.classList.add('js');
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(el.getClientRects().length && r.top<innerHeight*.92) el.classList.add('in'); else io.observe(el);
+    });
+    /* language switch shows the other text: make it visible right away */
+    document.querySelectorAll('[data-set-lang],#globe-switch').forEach(function(b){b.addEventListener('click',function(){
+      document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ if(el.getBoundingClientRect().top<innerHeight) el.classList.add('in'); });
+    })});
+  }
+
+  /* gentle parallax on the photos */
+  if(!reduce){
+    var scenes=[].slice.call(document.querySelectorAll('.scene'));
+    var ticking=false;
+    function update(){
+      var vh=innerHeight;
+      scenes.forEach(function(s){
+        var r=s.getBoundingClientRect();
+        if(r.bottom<-100||r.top>vh+100) return;
+        var p=(r.top+r.height/2-vh/2)/(vh+r.height); // -0.5 … 0.5
+        var y=p*140; if(s.hasAttribute('data-pin-top')) y=Math.max(0,y);
+        s.firstElementChild.style.transform='translate3d(0,'+y.toFixed(1)+'px,0) scale(1.08)';
+      });
+      ticking=false;
+    }
+    addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+    addEventListener('resize',update);
+    update();
+  }
+})();
+</script>
+
+</body>
+</html>
